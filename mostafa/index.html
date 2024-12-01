@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width , intial-scale=1.0">
+        <title>Hospital sections </title>
+        <!-- <link rel="icon" href="pngtree-hospital-logo-icon-abstract-alliance-png-image_5638727-removebg-preview.png"> -->
+        <link rel="icon" href="../image/hospital_icon.png">
+
+        <link rel="stylesheet" href="index.css">  
+    </head>
+     <body>
+
+        <header>
+                    <a href="../index.html">
+            <img class="logo" src="pngtree-hospital-logo-icon-abstract-alliance-png-image_5638727-removebg-preview.png" >
+        </a> 
+           <a href="#management" class="button1">Management</a>
+            <h1>Welcome to our Hospital</h1>
+            
+            <p>Your Health, Our Responsibility</p>
+           
+        </header>
+        <main>
+            <section class="hs">
+                <h2>Hospital Sections</h2>
+            </section>
+            <br>
+        <p> <strong>#In the Hospital there are many Departments, icluding:</strong> </p>
+            <ul class="s">
+                <li><strong>Emergency :</strong>24/7 care for urgent medical conditions.</li>
+                <li><Strong>Dentistry:</Strong>For Dental Treatment and Beautification. For more Information Click Here----> <a href="../nader/index.html" class="button">Here </a></li>
+                <li><strong>Orthopedics:</strong>Bone and joint health specialists.</li>
+                <li><strong>Pharmacy:</strong>For Medications and injections</li>
+                <li><strong>Radiology:</strong>Advanced imaging services for diagnostics.</li>
+                <li><strong>Pediatrics:</strong>Comprehensive care for children and teens.</li>
+            </ul>
+        </main>
+        <div id="management">
+            <header>
+                <h1>Patient Management System</h1>
+                <p>Efficiently manage patient records and history</p>
+              </header>
+            
+              <main>
+                <section id="add-patient">
+                  <h2>Register New Patient</h2>
+                  <form id="patient-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required width="200px">
+                    
+                    <label for="id-number">ID Number:</label>
+                    <input type="text" id="id-number" required>
+                    
+                    <label for="history">Medical History:</label>
+                    <textarea id="history"></textarea>
+                    
+                    <button type="submit">Register</button>
+                  </form>
+                </section>
+            
+                <section id="search-patient">
+                  <h2>Search Patient</h2>
+                  <input type="text" id="search" placeholder="Search by name or ID number">
+                  <div id="search-results"></div>
+                </section>
+            
+                <section id="patient-list">
+                  <h2>Patient List</h2>
+                  <ul id="patients"></ul>
+                </section>
+              </main>
+
+        </div>
+
+        <footer>
+            <p>We wish you health and wellness</p>
+        </footer>
+        <script src="index.js"></script>
+     </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Room Management</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="icon" href="image/hospital_icon.png">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .room-management {
+            padding: 2rem;
+        }
+
+        .room-types {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .room-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .room-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .room-status {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        .vacant {
+            background: #2ecc71;
+            color: white;
+        }
+
+        .occupied {
+            background: #e74c3c;
+            color: white;
+        }
+
+        .booking-form {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .btn {
+            background: #3498db;
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="room-management">
+            <div class="d-flex justify-content-around">
+                <h1>Hospital Room Management</h1>
+                <h2>
+                    <a href="index.html">
+                        <button type="button" class="btn btn-primary">Back to Home</button>
+                    </a>
+                </h2>
+            </div>
+            
+            <div class="room-types">
+                <div class="room-card">
+                    <h2>General Rooms</h2>
+                    <p>Standard rooms for general patient care</p>
+                    <div class="room-status vacant">Vacant: 5</div>
+                    <div class="room-status occupied">Occupied: 15</div>
+                </div>
+
+                <div class="room-card">
+                    <h2>Operating Rooms</h2>
+                    <p>Specialized rooms for surgical procedures</p>
+                    <div class="room-status vacant">Vacant: 2</div>
+                    <div class="room-status occupied">Occupied: 3</div>
+                </div>
+
+                <div class="room-card">
+                    <h2>Isolation Rooms</h2>
+                    <p>Rooms for patients requiring isolation</p>
+                    <div class="room-status vacant">Vacant: 3</div>
+                    <div class="room-status occupied">Occupied: 7</div>
+                </div>
+            </div>
+
+            <div class="booking-form">
+                <h2>Book a Room</h2>
+                <form id="roomBookingForm">
+                    <div class="form-group">
+                        <label for="patientName">Patient Name</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="roomType">Room Type</label>
+                        <select id="roomType" required>
+                            <option value="">Select Room Type</option>
+                            <option value="general">General Room</option>
+                            <option value="operating">Operating Room</option>
+                            <option value="isolation">Isolation Room</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="admissionDate">Admission Date</label>
+                        <input type="date" id="admissionDate" required>
+                    </div>
+                    <button type="submit" class="btn">Book Room</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('roomBookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const patientName = document.getElementById('patientName').value;
+            const roomType = document.getElementById('roomType').value;
+            const admissionDate = document.getElementById('admissionDate').value;
+
+            // Here you would typically send this data to a server
+            alert(`Room Booking Confirmed!\n\nPatient: ${patientName}\nRoom Type: ${roomType}\nAdmission Date: ${admissionDate}`);
+            
+            // Reset form
+            this.reset();
+        });
+    </script>
+</body>
+</html>
+<style>
+    .booking-form {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        margin: 2rem auto;
+    }
+
+    .form-group {
+        margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        color: #2c3e50;
+        font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select {
+        width: 100%;
+        padding: 0.8rem;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+        outline: none;
+        border-color: #3498db;
+        box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+    }
+
+    .btn {
+        background-color: #3498db;
+        color: white;
+        padding: 1rem 2rem;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 1rem;
+        font-weight: bold;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #2980b9;
+    }
+
+    .room-status {
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        margin: 0.5rem 0;
+        font-weight: bold;
+    }
+
+    .vacant {
+        background-color: #2ecc71;
+        color: white;
+    }
+
+    .occupied {
+        background-color: #e74c3c;
+        color: white;
+    }
+
+    @media (max-width: 768px) {
+        .booking-form {
+            margin: 1rem;
+            padding: 1rem;
+        }
+    }
+</style>

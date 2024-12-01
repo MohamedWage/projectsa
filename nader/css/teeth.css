@@ -1,0 +1,119 @@
+
+#n{
+  position: relative;
+
+}
+ #n img{
+    margin-top: 10px;
+} 
+ #m{
+    position: absolute;
+    top: 0px;
+    color: black;
+    padding-left: 30px;
+    font-size: 45px;
+}
+#c{
+    position: absolute;
+    top: 150px;
+    color: black;
+    padding-left: 30px;
+    font-size: 12px;
+
+}
+#b{
+
+    position: absolute;
+    top: 330px;
+    padding-left: 200px; 
+}
+#f{
+    word-spacing: 20px;
+   text-align: right;
+   padding-right: 150px;
+}
+a{
+    color: white;
+    background-color:rgb(15, 192, 224);
+    border-radius: 10px;
+    font-size: 20px;
+}
+#f img{
+    padding-right: 930px;
+}
+#q{
+   text-align: center;
+   color: rgb(165, 151, 151);
+}
+#u{
+   text-align: center;
+   color: aquamarine;
+}
+#cards{
+    width: 30%;
+    background-color: gray;
+    display: inline-block;
+    margin-left: 35px;
+}
+
+#ih img{
+    width: 100%;
+}
+#t h1{
+    text-align: center;
+
+}
+#z p{
+    text-align: center;
+}
+#xz{
+    margin-top: 20px;
+}
+#yu{
+    color:  rgb(165, 151, 151);
+    text-align: center;
+}
+#io{
+    color: aquamarine;
+    text-align: center;
+}
+#pi{
+    padding-top: 40px;
+    color: aquamarine;
+    text-align: center;
+}
+#form-cont{
+
+    text-align: center;
+    font-size: 20px;
+    width: 50%;
+    margin-left: 300px;
+
+}
+#form1{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+#lk{
+
+margin-top: 20px;
+
+}
+#ty{
+
+    text-align: center;
+    padding-top: 40px;
+    color: aquamarine;
+}
+#form-contour{
+
+    text-align: center;
+    font-size: 20px;
+    width: 30%;
+    margin-left: 500px;
+
+}
+#pl{
+    padding-top: 20px;
+}
