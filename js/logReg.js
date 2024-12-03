@@ -17,7 +17,7 @@ var subReg = document.querySelector(".reg button")
 var userName = document.querySelector("#fName")
 var pass1 = document.querySelector("#pass1")
 var pass2 = document.querySelector("#pass2")
-var email = document.querySelector(".reg #email")
+var email = document.querySelector(".reg #email1")
 var lname = document.querySelector("#lname")
 subReg.addEventListener("click", function () {
     const Gender = document.querySelector("input[name='gender']:checked");
