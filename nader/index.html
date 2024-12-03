@@ -194,25 +194,28 @@
   </div>
   <h1 id="pi">حجز المواعيد</h1>
   <div id="form-cont">
+    <FOrm>
+
     <div id="form1">
       <p>Your Name:</p>
-      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Your Name" required>
     </div>
     <div id="form1">
       <p>Your Email:</p>
-      <input type="text" placeholder="Your Email">
+      <input type="text" placeholder="Your Email" required>
     </div>
     <div id="form1">
       <p>Data:</p>
-      <input type="date">
+      <input type="date" required>
     </div>
     <div id="form1">
       <p>Time:</p>
-      <input type="time">
+      <input type="time" required>
     </div>
     <div id="form1">
       <p>Appointments:</p>
-      <select name="select" id="#">
+      <select name="select" id="#" required>
+        <option value="">Select the Appointments</option>
         <option value="1">8Am-10pm</option>
         <option value="2">10Am-12pm</option>
         <option value="3">12Am-2pm</option>
@@ -222,8 +225,7 @@
         <option value="5">8Am-10pm</option>
       </select>
     </div>
-    <FOrm>
-
+    
       <div id="lk">
         <input type="submit" value="حجز موعد">
         <input type="reset" value="clear">
@@ -236,20 +238,21 @@
     <h1>Feedback for the patient</h1>
   </div>
   <div id="form-contour">
+    <form>
+
     <div id="form1">
       <p>Name:</p>
-      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Your Name" required>
     </div>
     <div id="form1">
       <p>Email:</p>
-      <input type="text" placeholder="Email">
+      <input type="text" placeholder="Email" required>
     </div>
     <div id="form1">
       <p>Massage:</p>
-      <textarea type="textmsg" placeholder="Your Massage"
-        style="width: 600px;height: 150px;margin-bottom: 8px;"></textarea>
+      <textarea type="textmsg" placeholder="Your Massage" 
+        style="width: 600px;height: 150px;margin-bottom: 8px;" required></textarea>
     </div>
-    <form>
       <div id="pl">
         <input type="submit" value="send Feedback">
         <input type="reset" value="clear">
@@ -257,7 +260,6 @@
       </div>
 
     </form>
-
   </div>
 
 

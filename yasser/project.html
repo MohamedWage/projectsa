@@ -61,7 +61,7 @@
         <section id="Appointment">
             <h3>Book an Appointment</h3>
             <form>
-                <label for="name">Name:</label>
+                <label for="name" >Name:</label>
                 <input type="text" id="name" required>
                 
                 <label for="phoneNumber">Phone Number:</label>
@@ -74,7 +74,7 @@
                 <input type="text" id="Address" required>
                 
                 <label for="Message">Message:</label>
-                <textarea name="Message" id="FCAQ" rows="5"></textarea>
+                <textarea  id="FCAQ" c rows="5"></textarea>
                 
                 <button type="submit">Send Data</button>
             </form>
@@ -98,9 +98,11 @@
             <p>Our pharmacy team work with medical professionals to provide the best care to the patients,and ensuring safe and effictive use to medicines.</p>
             <p>you can buy the medicine that you are need: </p>
             <form>
+                <input type="text" placeholder="enter your location" required>
+                <input type="text" placeholder="enter your number" id="number" required>
                 <label for="medicine"></label>
-                <textarea name="medicine" id="pay" placeholder="describe this medicine or enter the name "  rows="5"></textarea>
-                <button type="submit">Pay Medicine</button>
+                <input type="text" name="medicine" id="pay" placeholder="enter the name medicine">
+                <button type="submit" id="sub" >Pay Medicine</button>
             </form>
         </section>
 
@@ -131,6 +133,17 @@
         <footer>
             <p>&copy; 2024 Dr. Smith. All rights reserved.</p>
         </footer>
-
+        <script>
+            var number = document.querySelector("#number")
+            var btn = document.querySelector("#sub")
+            btn.addEventListener("click",function ()
+            {
+                console.log(number.value.length)
+                if(number.value.length !=11){
+                    alert ("enter a number correct")
+                }
+            }
+            )
+        </script>
     </body>
 </html>
